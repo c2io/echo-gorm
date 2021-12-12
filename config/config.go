@@ -1,19 +1,22 @@
 package config
 
 import (
-	"github.com/tkanos/gonfig"
+	"github.com/ilyakaznacheev/cleanenv"
 )
 
 type Configuration struct {
-	DB_USERNAME string
-	DB_PASSWORD string
-	DB_PORT     string
-	DB_HOST     string
-	DB_NAME     string
+	Database struct {
+		User     string `env:"DB_USER"`
+		Password string `env:"DB_PASSWORD"`
+		Port     int    `env:"DB_PORT"`
+		Host     string `env:"DB_HOST"`
+		Name     string `toml:"name" env:"DB_NAME"`
+	}
 }
 
 func GetConfig() Configuration {
-	configuration := Configuration{}
-	gonfig.GetConf("config/config.json", &configuration)
-	return configuration
+	c := Configuration{}
+	cleanenv.ReadConfig("config/config.toml", &c)
+
+	return c
 }

@@ -12,5 +12,7 @@ func Init() *echo.Echo {
 	e.GET("/", api.Home)
 
 	e.GET("/users", api.GetUsers)
+	e.POST("/users", api.PostUsers)
+
 	return e
 }
