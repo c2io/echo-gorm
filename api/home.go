@@ -7,7 +7,5 @@ import (
 )
 
 func Home(c echo.Context) error {
-
 	return c.String(http.StatusOK, "Main hgjg Index")
-
 }

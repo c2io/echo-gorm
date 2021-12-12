@@ -18,7 +18,6 @@ func GetUsers(c echo.Context) error {
 }
 
 func PostUsers(c echo.Context) error {
-
 	user := new(model.User)
 	c.Bind(user)
 
