@@ -3,7 +3,7 @@ package route
 import (
 	"echo-gorm/api"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 func Init() *echo.Echo {
