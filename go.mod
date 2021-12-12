@@ -4,7 +4,6 @@ go 1.17
 
 require (
 	github.com/ilyakaznacheev/cleanenv v1.2.6
-	github.com/jinzhu/gorm v1.9.16
 	github.com/labstack/echo v3.3.10+incompatible
 	gorm.io/driver/mysql v1.2.1
 	gorm.io/gorm v1.22.4
